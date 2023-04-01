@@ -45,11 +45,11 @@ const TableGrid = () => {
     return (
         <div className={clsx(styles.grid)}>
             {data.map((event, idx) => (
-              <>
+              <React.Fragment key={idx}>
                 <div className={clsx(styles.cell, styles.kw)}>{event.kw}</div>
                 <div className={clsx(styles.cell, styles.day)}>{event.day}</div>
                 <div className={clsx(styles.cell, styles.description)}>{event.description}</div>
-              </>
+              </React.Fragment>
             ))}
         </div>
     )
