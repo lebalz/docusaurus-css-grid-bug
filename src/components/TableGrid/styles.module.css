@@ -2,7 +2,7 @@
   display: grid;
   grid-template-columns:
     [kw] 2.5em
-    [day] 3em
+    [dayName] 3em
     [description] minmax(10em, 1fr);
   grid-template-rows: auto;
   grid-area: auto / auto / auto / auto;
@@ -11,19 +11,19 @@
   padding: 4px;
 }
 
-.grid.cell {
+.grid > .cell {
   padding: 2px 4px;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
   background: var(--ifm-color-emphasis-100);
 }
-.grid.kw {
+.grid > .kw {
   grid-column: kw;
 }
-.grid.day {
-  grid-column: day;
+.grid > .day {
+  grid-column: dayName;
 }
-.grid.description {
+.grid > .description {
   grid-column: description;
 }
